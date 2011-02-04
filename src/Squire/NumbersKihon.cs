@@ -9,37 +9,38 @@ namespace Squire
     {
         protected override int Return_The_Maximum_Value_Of_Int32()
         {
-            throw new NotImplementedException();
+            return Int32.MaxValue;
         }
 
         protected override int Return_The_Minimum_Value_Of_Int32()
         {
-            throw new NotImplementedException();
+            return Int32.MinValue;
         }
 
         protected override int Return_The_Remainder_Of_a_Divided_By_b(int a, int b)
         {
-            throw new NotImplementedException();
+            return a % b;
         }
 
         protected override double Return_The_Maximum_Value_Of_Double()
         {
-            throw new NotImplementedException();
+            return double.MaxValue;
         }
 
         protected override double Return_The_Minimum_Value_Of_Double()
         {
-            throw new NotImplementedException();
+            return double.MinValue;
         }
 
         protected override bool Return_True_If_a_Is_Not_A_Number(double a)
         {
-            throw new NotImplementedException();
+            return Double.IsNaN(a);
         }
 
         protected override bool Return_True_If_a_Is_An_Infinity(double a)
         {
-            throw new NotImplementedException();
+            bool IsValid = (Double.IsPositiveInfinity(a) || Double.IsNegativeInfinity(a));
+            return IsValid;
         }
     }
 }
