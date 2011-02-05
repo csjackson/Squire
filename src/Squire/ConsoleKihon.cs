@@ -18,22 +18,24 @@ namespace Squire
     {
         protected override void Write_FooBar_To_The_Console(IConsoleWrapper console)
         {
-            throw new NotImplementedException();
+            console.Write("Foo");
         }
 
         protected override void WriteLine_FooBar_To_The_Console(IConsoleWrapper console)
         {
-            throw new NotImplementedException();
+            console.WriteLine("Foo");
         }
 
         protected override void Write_Foo_In_Blue_To_The_Console(IConsoleWrapper console)
         {
-            throw new NotImplementedException();
+            console.ForegroundColor = ConsoleColor.Blue;
+            console.Write("Foo");
+            console.ResetColor();
         }
 
         protected override object Read_Line_From_Console_And_Return_Value(IConsoleWrapper console)
         {
-            throw new NotImplementedException();
+            return console.ReadLine();            
         }
     }
 }
